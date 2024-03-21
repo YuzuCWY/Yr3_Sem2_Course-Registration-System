@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Selection</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Course Selection</h2>
+    <h2>Add Course Selection</h2>
+    <form action="add_course_selection.php" method="post">
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br><br>
+        
+        <label for="course_id">Course ID:</label>
+        <input type="text" id="course_id" name="course_id" required><br><br>
+        
+        <label for="result">Result:</label>
+        <input type="text" id="result" name="result" required><br><br>
+        
+        <input type="submit" value="Add Selection">
+    </form>
+    
+    <h2>Drop Course Selection</h2>
+    <form action="drop_course_selection.php" method="post">
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br><br>
+        
+        <label for="course_id">Course ID:</label>
+        <input type="text" id="course_id" name="course_id" required><br><br>
+        
+        <input type="submit" value="Drop Selection">
+    </form>
+    
+    <h2>Show All Students' Course selection</h2>
+    <form action="show_course_selection.php" method="POST">
+        <input type="submit" name="show_all" value="Show All Students">
+    </form>
+
+    <br>
+    <a href='main.html'>Return to Main Page</a>
+    
+</body>
+</html>

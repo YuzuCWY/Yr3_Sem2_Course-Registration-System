@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+</head>
+<body>
+    <h1>Student Management System</h1>
+
+    <h2>Add Student</h2>
+    <form action="add_student.php" method="POST">
+        <label for="studentId">Student ID:</label>
+        <input type="text" name="student_id" placeholder="Student ID" required><br>
+        <label for="studentName">Student's Name:</label>
+        <input type="text" name="student_name" placeholder="Student Name" required><br>
+        <label for="dept_id">Student's Department:</label>
+        <input type="text" name="dept_id" placeholder="Department ID" required><br>
+        <input type="submit" name="add" value="Add Student">
+    </form>
+
+    <h2>Modify Student</h2>
+    <form action="modify_student.php" method="POST">
+        <label for="student_id">Student ID:</label>
+        <input type="text" name="student_id" placeholder="Old Student ID" required><br>
+        <label for="new_student_id">Student ID:</label>
+        <input type="text" name="new_student_id" placeholder="New Student ID" required><br>
+        <label for="new_student_name">Student's Name:</label>
+        <input type="text" name="new_student_name" placeholder="New Student Name" required><br>
+        <label for="new_dept_id">Department ID:</label>
+        <input type="text" name="new_dept_id" placeholder="New Department ID" required><br>
+        <input type="submit" name="update" value="Update Student">
+    </form>
+
+    <h2>Delete Student</h2>
+    <form action="delete_student.php" method="POST">
+        <label for="student_id">Delete Student by ID:</label>
+        <input type="text" name="student_id" placeholder="Student ID" required><br>
+        <input type="submit" name="delete" value="Delete Student">
+    </form>
+
+    <h2>Search Student</h2>
+    <form action="query_student.php" method="POST">
+        <label for="student_id">Student ID:</label>
+        <input type="text" name="student_id" placeholder="Student ID" required><br>
+        <input type="submit" name="search" value="Search Student">
+    </form>
+
+    <h2>Show All Students</h2>
+    <form action="show_student.php" method="POST">
+        <input type="submit" name="show_all" value="Show All Students">
+    </form>
+
+    <br>
+    <a href='main.html'>Return to Main Page</a>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Management</title>
+</head>
+<body>
+    <h1>Department Management</h1>
+    
+    <!-- Add Department Form -->
+    <h2>Add Department</h2>
+    <form action="add_department.php" method="POST">
+        <label for="code">Department Code:</label>
+        <input type="text" name="code" id="code" required><br>
+        <label for="name">Department Name:</label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="chair">Department Chair:</label>
+        <input type="text" name="chair" id="chair" required><br>
+        <input type="submit" value="Add Department">
+    </form>
+    
+    <!-- Modify Department Form -->
+    <h2>Modify Department</h2>
+    <form action="modify_department.php" method="POST">
+        <label for="departmentId">Department ID:</label>
+        <input type="text" name="departmentId" id="departmentId" required><br>
+        <label for="newCode">New Code:</label>
+        <input type="text" name="newCode" id="newCode" required><br>
+        <label for="newName">New Name:</label>
+        <input type="text" name="newName" id="newName" required><br>
+        <label for="newChair">New Chair:</label>
+        <input type="text" name="newChair" id="newChair" required><br>
+        <input type="submit" value="Modify Department">
+    </form>
+    
+    <!-- Delete Department Form -->
+    <h2>Delete Department</h2>
+    <form action="delete_department.php" method="POST">
+        <label for="departmentId">Department ID:</label>
+        <input type="text" name="departmentId" id="departmentId" required><br>
+        <input type="submit" value="Delete Department">
+    </form>
+    
+    <!-- Query Department Form -->
+    <h2>Query Department</h2>
+    <form action="query_department.php" method="POST">
+        <label for="departmentId">Department ID:</label>
+        <input type="text" name="departmentId" id="departmentId" required><br>
+        <input type="submit" value="Query Department">
+    </form>
+    <br>
+    <!-- Add the button to show all department data -->
+    <h2>Show All Departments</h2>
+    <button onclick="showAllDepartments()">Show All Departments</button>
+    <br>
+
+    <script>
+        function showAllDepartments() {
+            // Redirect to a PHP file that retrieves and displays all department data
+            window.location.href = "show_departments.php";
+        }
+    </script>
+    <br>
+    <a href="main.html">Return to Main Page</a>
+</body>
+</html>
